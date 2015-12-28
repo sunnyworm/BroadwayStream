@@ -123,45 +123,10 @@ PL$29/*promiseland exception catcher*/(function(){
       PL$18/*console*/["log"]("starting stream");
       try
       {
-        var PL$19/*params*/ = [
-          "-y", 
-          "-i", 
-          this[9], 
-          "-r", 
-          "30000/1001", 
-          "-b:a", 
-          "2M", 
-          "-bt", 
-          "4M", 
-          "-vcodec", 
-          "libx264", 
-          "-pass", 
-          "1", 
-          "-coder", 
-          "0", 
-          "-bf", 
-          "0", 
-          "-flags", 
-          "-loop", 
-          "-wpredp", 
-          "0", 
-          "-an", 
-          "-f", 
-          "h264", 
-          "-"
-        ];
-        ;
-        var PL$20/*x*/ = "";
-        ;
-        var PL$21/*i*/ = 0;
-        ;
-        for(PL$21/*i*/ = 0;(PL$21/*i*/ < PL$19/*params*/["length"]);++PL$21/*i*/){{
-          PL$20/*x*/ += " ";
-          PL$20/*x*/ += PL$19/*params*/[PL$21/*i*/];}};
-        ;
-        PL$18/*console*/["log"](("ffmpeg " + PL$20/*x*/));
-        this[5]["process"] = PL$10/*spawn*/("ffmpeg", PL$19/*params*/);
-        this[5]["stream"] = this[5]["process"]["stdout"];
+
+        // this[5]["process"] = PL$10/*spawn*/("ffmpeg", PL$19/*params*/);
+        // this[5]["stream"] = this[5]["process"]["stdout"];
+        this[5]["stream"] = process.stdin;
         /*tracked assign*/(function(v){
         if (_TPL$22/*self*/){ _TPL$22/*self*/(); };
         PL$22/*self*/ = v;
